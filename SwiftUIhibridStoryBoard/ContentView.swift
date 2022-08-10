@@ -10,9 +10,9 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack{
-            TheVCforSwiftUI()
-            Spacer()
+            TheViewForSwiftUI()
             Text("Hello")
+            TheVCforSwiftUI()
         }
         
     }

@@ -18,24 +18,42 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsz-Sm-FfZ">
-                    <rect key="frame" x="86" y="148" width="67" height="31"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsz-Sm-FfZ">
+                    <rect key="frame" x="118" y="144" width="178" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="31" id="Aw8-wB-oJJ"/>
+                        <constraint firstAttribute="width" constant="178" id="CAW-uo-f5H"/>
+                    </constraints>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="gray" title="Button"/>
+                    <buttonConfiguration key="configuration" style="gray" title="push Next Page"/>
+                    <connections>
+                        <action selector="nextPageButton:" destination="-1" eventType="touchUpInside" id="jpY-NR-iY3"/>
+                    </connections>
                 </button>
-                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vBB-4O-cPh">
-                    <rect key="frame" x="213" y="209" width="49" height="31"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </switch>
-                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="5EN-kf-F5A">
-                    <rect key="frame" x="32" y="226" width="94" height="32"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </stepper>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9L6-9M-lcL">
+                    <rect key="frame" x="118" y="205" width="178" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="178" id="FfZ-7J-Bzs"/>
+                        <constraint firstAttribute="width" constant="178" id="Iir-Qk-8i6"/>
+                        <constraint firstAttribute="height" constant="31" id="QEy-GT-kQ8"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="31" id="SXv-Eg-5iO"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="gray" title="present Next Page"/>
+                    <connections>
+                        <action selector="presentNextPage:" destination="-1" eventType="touchUpInside" id="xgU-yl-rj2"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-            <point key="canvasLocation" x="132" y="126"/>
+            <constraints>
+                <constraint firstItem="bsz-Sm-FfZ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="100" id="D6f-FL-YHv"/>
+                <constraint firstItem="9L6-9M-lcL" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="O4r-Ru-yet"/>
+                <constraint firstItem="bsz-Sm-FfZ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="OSi-Ol-UHV"/>
+                <constraint firstItem="9L6-9M-lcL" firstAttribute="top" secondItem="bsz-Sm-FfZ" secondAttribute="bottom" constant="30" id="yPQ-uy-E5C"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="125.89285714285714"/>
         </view>
     </objects>
     <resources>

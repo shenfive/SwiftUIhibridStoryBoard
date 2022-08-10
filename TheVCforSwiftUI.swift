@@ -11,15 +11,12 @@ import SwiftUI
 struct TheVCforSwiftUI:UIViewControllerRepresentable{
 
     func makeUIViewController(context: Context) -> some UIViewController {
-        return TheViewController.init()
+        let nav = UINavigationController()
+        nav.addChild(TheViewController())
+        nav.popToRootViewController(animated: true)
+        return nav
     }
     
-    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
-        
-    }
-    
+    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {}
     typealias UIViewType = TheViewController
-    
-    
-    
 }
