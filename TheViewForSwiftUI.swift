@@ -6,16 +6,12 @@
 //
 
 import SwiftUI
-
-
 struct TheViewForSwiftUI:UIViewRepresentable{
     typealias UIViewType = TheView
     func makeUIView(context: Context) -> TheView {
         return TheView()
     }
-    
     func updateUIView(_ uiView: TheView, context: Context) {
         
     }
-    
 }

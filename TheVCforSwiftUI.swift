@@ -6,10 +6,7 @@
 //
 
 import SwiftUI
-
-
 struct TheVCforSwiftUI:UIViewControllerRepresentable{
-
     func makeUIViewController(context: Context) -> some UIViewController {
         let nav = UINavigationController()
         nav.addChild(TheViewController())
@@ -17,6 +14,8 @@ struct TheVCforSwiftUI:UIViewControllerRepresentable{
         return nav
     }
     
-    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {}
+    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
+        
+    }
     typealias UIViewType = TheViewController
 }
